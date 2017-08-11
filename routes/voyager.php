@@ -30,6 +30,11 @@ Route::group(['as' => 'voyager.'], function () {
 
         Route::get('profile', ['uses' => $namespacePrefix.'VoyagerController@profile', 'as' => 'profile']);
 
+        Route::get('bread-ajax-datatable', [
+            'as' => 'bread-ajax.datatable',
+            'uses' => '\TCG\Voyager\Http\Controllers\BreadAjaxController@datatableAjax'
+        ]);
+
         try {
             foreach (DataType::all() as $dataType) {
                 if (!class_exists($dataType->model_name)) {

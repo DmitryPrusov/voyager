@@ -20,7 +20,9 @@
         "doctrine/dbal": "^2.5",
         "larapack/doctrine-support": "~0.1.0",
         "arrilot/laravel-widgets": "^3.7",
-        "league/flysystem": "~1.0.35"
+        "league/flysystem": "~1.0.35",
+        "laravelcollective/html": "^5.4",
+        "yajra/laravel-datatables-oracle": "^7.5"
     },
     "require-dev": {
         "phpunit/phpcov": "~3.0",
