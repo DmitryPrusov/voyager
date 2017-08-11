@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use TCG\Voyager\Facades\Voyager;
 use Yajra\Datatables\Facades\Datatables;
 
-class BreadAjaxController extends Controller
+class BreadAjaxController extends VoyagerBreadController
 {
     public $use_translations = false;
 
