@@ -38,12 +38,16 @@ class MenuItem extends Model
 
     protected function prepareLink($absolute, $route, $parameters, $url)
     {
-        if (is_null($parameters)) {
+         if (is_null($parameters)) {
             $parameters = [];
         }
 
+        if (is_object($parameters)) {
+            $parameters = (array)$parameters;
+        }
+
         if (!is_array($parameters)) {
-            $parameters = json_decode($parameters, true);
+           $parameters = json_decode($parameters, true);
         }
 
         if (!is_null($route)) {
